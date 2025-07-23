@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="content">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">My Profile</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <button class="btn">Click Me</button>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-me">
+      <div class="text">
+        <h1>Creating <span>value through</span> every line of code!</h1>
+        <p>
+          I'm <strong>Basmla Abdo</strong>, a Frontend Web Developer passionate about building modern, responsive, and user-friendly websites. <br>
+          I love turning ideas into elegant, interactive websites, and I'm always learning to improve my skills. <br>
+          Check out my projects and skills!
+        </p>
+      </div>
+      <div class="image">
+        <img id="myImage" src="image/unnamed.png" alt="My photo">
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="border">
+      <p>Skills</p>
+      <div class="skill-box">HTML</div>
+      <div class="skill-box">CSS</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Python</div>
+      <div class="skill-box">Bootstrap</div>
+      <div class="skill-box">Photoshop</div>
+    </div>
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <p>If you have any questions or just want to say hello, feel free to contact me!</p>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    </section>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const img = document.getElementById('myImage');
+    img.addEventListener('click', function () {
+      img.style.transition = 'transform 1s ease';
+      img.style.transform = 'rotate(360deg)';
+      setTimeout(() => {
+        img.style.transform = 'rotate(0deg)';
+      }, 1000);
+    });
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you, your message has been sent!');
+    form.reset();
+    });
+ </script>
+
+  </script>
+
+
+</body>
+</html>
